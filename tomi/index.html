@@ -2,48 +2,163 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Listen to My Song</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vse najboljše - Kapetan Reda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #f2f2f2;
+      --text: #222;
+      --card-bg: #ffffff;
+      --accent: #4caf50;
+      --muted: #666;
+    }
+
+    body.dark {
+      --bg: #121212;
+      --text: #f2f2f2;
+      --card-bg: #1e1e1e;
+      --accent: #81c784;
+      --muted: #aaa;
+    }
+
     body {
       margin: 0;
       padding: 2rem;
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
+      font-family: 'Raleway', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    .toggle-wrapper {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    .toggle-switch {
+      position: relative;
+      width: 50px;
+      height: 26px;
+      background: var(--card-bg);
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       display: flex;
       align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 6px;
+      transition: background 0.4s ease;
+    }
+
+    .toggle-switch svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--text);
+      transition: opacity 0.4s ease;
+    }
+
+    .toggle-switch .sun {
+      opacity: 1;
+    }
+
+    .toggle-switch .moon {
+      opacity: 0;
+    }
+
+    body.dark .toggle-switch .sun {
+      opacity: 0;
+    }
+
+    body.dark .toggle-switch .moon {
+      opacity: 1;
+    }
+
+    .player-container {
+      background: var(--card-bg);
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      max-width: 700px;
+      width: 100%;
       text-align: center;
+      transition: background 0.4s, color 0.4s;
     }
 
     h1 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
     }
 
     audio {
       width: 100%;
-      max-width: 400px;
-      outline: none;
+      max-width: 100%;
+      margin: 1rem 0 2rem;
+      filter: brightness(0.9) contrast(1.2);
     }
 
-    .player-container {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    .lyrics {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--muted);
+      white-space: pre-line;
+    }
+
+    @media (max-width: 600px) {
+      .player-container {
+        padding: 1.5rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="toggle-wrapper">
+    <div class="toggle-switch" id="modeToggle" title="Toggle dark/light mode">
+      <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M6.76 4.84l-1.8-1.79-1.42 1.42 1.79 1.8 1.43-1.43zm10.45 14.31l1.79 1.8 1.42-1.42-1.8-1.79-1.41 1.41zm1.8-12.49l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zM4.22 17.66l1.8 1.79 1.41-1.41-1.79-1.8-1.42 1.42zM12 4V1h-1v3h1zm0 19v-3h-1v3h1zm8-8h3v-1h-3v1zM4 12H1v-1h3v1zm8-5a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"/>
+      </svg>
+      <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M21 12.79A9 9 0 0 1 11.21 3a7 7 0 1 0 9.79 9.79z"/>
+      </svg>
+    </div>
+  </div>
+
   <div class="player-container">
-    <h1>🎵 Kapitan reda ver 2.0</h1>
+    <h1>Kapetan Reda</h1>
     <audio controls>
-      <source src="NOT_READY_kapitan-reda.mp3" type="audio/mpeg" />
+      <source src="NOT_READY_kapetan reda.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
+    <div class="lyrics">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+      Donec hendrerit, elit in fermentum gravida, justo purus laoreet libero.  
+      Nulla facilisi, morbi non arcu vitae quam placerat rutrum.  
+      
+      Pellentesque habitant morbi tristique senectus et netus.  
+      Vivamus fringilla erat sed tellus lacinia, ut luctus ex pretium.  
+      Fusce in metus quis nisl tincidunt accumsan.  
+      
+      Aliquam erat volutpat. Curabitur id sem ut purus gravida bibendum.  
+      Quisque eget nulla a lorem malesuada dapibus.
+    </div>
   </div>
+
+  <script>
+    const toggle = document.getElementById('modeToggle');
+    const body = document.body;
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark');
+    });
+  </script>
 </body>
 </html>
