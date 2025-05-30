@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tomi, vse najboljše!</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -48,7 +49,7 @@
       background: var(--card-bg);
       border-radius: 50px;
       cursor: pointer;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -83,7 +84,7 @@
       background: var(--card-bg);
       padding: 2.5rem;
       border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
       max-width: 700px;
       width: 100%;
       text-align: center;
@@ -125,6 +126,33 @@
       display: block;
     }
 
+    .fontsize-wrapper {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .fontsize-wrapper button {
+      background: var(--card-bg);
+      color: var(--text);
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .fontsize-wrapper button:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+
     .title-svg object {
       width: 100%;
       height: auto;
@@ -142,14 +170,20 @@
     }
   </style>
 </head>
+
 <body>
+  <div class="fontsize-wrapper">
+    <button id="decreaseFont" title="Decrease font size">−</button>
+    <button id="increaseFont" title="Increase font size">+</button>
+  </div>
   <div class="toggle-wrapper">
     <div class="toggle-switch" id="modeToggle" title="Toggle dark/light mode">
       <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M6.76 4.84l-1.8-1.79-1.42 1.42 1.79 1.8 1.43-1.43zm10.45 14.31l1.79 1.8 1.42-1.42-1.8-1.79-1.41 1.41zm1.8-12.49l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zM4.22 17.66l1.8 1.79 1.41-1.41-1.79-1.8-1.42 1.42zM12 4V1h-1v3h1zm0 19v-3h-1v3h1zm8-8h3v-1h-3v1zM4 12H1v-1h3v1zm8-5a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"/>
+        <path
+          d="M6.76 4.84l-1.8-1.79-1.42 1.42 1.79 1.8 1.43-1.43zm10.45 14.31l1.79 1.8 1.42-1.42-1.8-1.79-1.41 1.41zm1.8-12.49l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zM4.22 17.66l1.8 1.79 1.41-1.41-1.79-1.8-1.42 1.42zM12 4V1h-1v3h1zm0 19v-3h-1v3h1zm8-8h3v-1h-3v1zM4 12H1v-1h3v1zm8-5a5 5 0 1 1 0 10 5 5 0 0 1 0-10z" />
       </svg>
       <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M21 12.79A9 9 0 0 1 11.21 3a7 7 0 1 0 9.79 9.79z"/>
+        <path d="M21 12.79A9 9 0 0 1 11.21 3a7 7 0 1 0 9.79 9.79z" />
       </svg>
     </div>
   </div>
@@ -165,8 +199,8 @@
       UuuuUuuu kapetan reda,
       UuuuUuuu poletni hit!
 
-      Izpit za barko je delal v Šentjurju,  
-      na jezeru mirnem, ne pa v neurju. 
+      Izpit za barko je delal v Šentjurju,
+      na jezeru mirnem, ne pa v neurju.
       A zdaj je kapetan s kozarčkom vina,
       krmilo prevzame, ko je daleč marina.
 
@@ -175,51 +209,51 @@
       Vse pod kontrolo je v njegovi družbi.
       Normalno, če delaš v državni službi!
 
-      Oooo Tomi, kapetan reda,  
+      Oooo Tomi, kapetan reda,
       Med valove nas vodi - seveda!
       Letos večja naša je ekipa,
       ženske so z nami, da ladja bolj škripa!
-      Oooo Tomi, majstor organizacije, 
-      na barki ni prostora za improvizacije! 
+      Oooo Tomi, majstor organizacije,
+      na barki ni prostora za improvizacije!
       Ko reče "Zdaj, vsi v vrsto, brez izjeme!",
       ker pri Tomiju je red – tu ni dileme!
 
-      Ko kaj ni na mestu, ga zagrabi šok,  
-      vse mora štimat to ni hiter skok.  
+      Ko kaj ni na mestu, ga zagrabi šok,
+      vse mora štimat to ni hiter skok.
       Od Dušija podedoval red in mir,
-      da na koncu privošči lahko si en pir.  
+      da na koncu privošči lahko si en pir.
 
-      V novi hiši vse diši po svežem laku,  
-      žar je spucan, ni šans da bi ga namaku.  
-      Janja je zvezda, ki zmehča mu rob,  
+      V novi hiši vse diši po svežem laku,
+      žar je spucan, ni šans da bi ga namaku.
+      Janja je zvezda, ki zmehča mu rob,
       in otroci ga vrtijo bolj kot kak Tik-Tok.
-        
-      Oooo Tomi, kapitan reda,  
+
+      Oooo Tomi, kapitan reda,
       Med valove nas vodi - seveda!
       Letos večja naša je ekipa,
       ženske so z nami, da ladja bolj škripa!
-      Oooo Tomi, majstor organizacije, 
-      na barki ni prostora za improvizacije! 
-      Ko reče "zdaj", vsi v vrsto, brez izjeme, 
+      Oooo Tomi, majstor organizacije,
+      na barki ni prostora za improvizacije!
+      Ko reče "zdaj", vsi v vrsto, brez izjeme,
       ker pri Tomiju je red – tu ni dileme!
 
-      Če si kdaj bil z njim v avtu – veš kaj njegov je moto  
-      če poliješ kavo, kliče  - "Janja, prinesi coto!"  
+      Če si kdaj bil z njim v avtu – veš kaj njegov je moto
+      če poliješ kavo, kliče - "Janja, prinesi coto!"
       Vse v pravih škatlah, vse po vrstnem redu,
       pri Tomiju ni prostora za zmedo.
 
-      Na morju pa zopet z nasmehom na licu,  
+      Na morju pa zopet z nasmehom na licu,
       pred junijem te bo še večkrat poklicu.
       Od jutra do sutra točno na uro,
       Ne zamujaj na zajtrk - "preveri PDF brošuro"!
 
-      Oooo Tomi, kapitan reda,  
+      Oooo Tomi, kapitan reda,
       Med valove nas vodi - seveda!
       Letos večja naša je ekipa,
       ženske so z nami, da ladja bolj škripa!
-      Oooo Tomi, majstor organizacije, 
-      na barki ni prostora za improvizacije! 
-      Ko reče "zdaj", vsi v vrsto, brez izjeme, 
+      Oooo Tomi, majstor organizacije,
+      na barki ni prostora za improvizacije!
+      Ko reče "zdaj", vsi v vrsto, brez izjeme,
       ker pri Tomiju je red – tu ni dileme!
 
       (Instrumental: pičijo trubeee!)
@@ -229,22 +263,22 @@
       Finance, napotki in fotke čolniča
       poleg vseh jošk tudi filmčki tiča.
 
-      Oooo Tomi, kapitan reda,  
+      Oooo Tomi, kapitan reda,
       Med valove nas vodi - seveda!
       Letos večja naša je ekipa,
       ženske so z nami – da ladja bolj škripa!
-      Oooo Tomi, majstor organizacije, 
+      Oooo Tomi, majstor organizacije,
       na barki ni prostora za improvizacije!
-      Sonce, vino, vetrič in ekipa zbrana –  
+      Sonce, vino, vetrič in ekipa zbrana –
       naj živi Tomi, kapetan reda in legenda prava!
 
-      Oooo Tomi, kapitan reda,  
+      Oooo Tomi, kapitan reda,
       Med valove nas vodi - seveda!
       Letos večja naša je ekipa,
       ženske so z nami – da ladja bolj škripa!
-      Oooo Tomi, majstor organizacije, 
+      Oooo Tomi, majstor organizacije,
       na barki ni prostora za improvizacije!
-      Sonce, vino, vetrič in ekipa zbrana –  
+      Sonce, vino, vetrič in ekipa zbrana –
       naj živi Tomi, kapetan reda in legenda prava!
     </div>
   </div>
@@ -256,6 +290,25 @@
     toggle.addEventListener('click', () => {
       body.classList.toggle('dark');
     });
+
+    const lyrics = document.querySelector('.lyrics');
+    let fontSize = 1; // rem
+
+    document.getElementById('increaseFont').addEventListener('click', () => {
+      if (fontSize < 3) {
+        fontSize += 0.1;
+        lyrics.style.fontSize = fontSize.toFixed(2) + 'rem';
+      }
+    });
+
+    document.getElementById('decreaseFont').addEventListener('click', () => {
+      if (fontSize > 0.6) {
+        fontSize -= 0.1;
+        lyrics.style.fontSize = fontSize.toFixed(2) + 'rem';
+      }
+    });
   </script>
+
 </body>
+
 </html>
